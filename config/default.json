@@ -1,4 +1,0 @@
-{
-    "mongoURI":"mongodb+srv://dbUser:dbPass@userdetails.sbh8r.mongodb.net/Tamil?retryWrites=true&w=majority",
-    "jwtSecret":"mySecret"
-}
