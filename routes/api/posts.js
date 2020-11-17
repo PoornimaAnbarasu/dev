@@ -6,7 +6,7 @@ const auth=require("../../middleware/auth");
 const User = require("../../models/User");
 const Profile = require("../../models/Profile");
 const Post = require("../../models/Post");
-const { remove } = require("../../models/User");
+//const { remove } = require("../../models/User");
 
 
 //Get all the post
@@ -48,7 +48,7 @@ router.post("/", [auth,
     
             const post = await newPost.save();
             res.json(post);
-
+ 
             
         } catch (error) {
             console.log(error);
@@ -79,7 +79,7 @@ router.delete("/:id", auth, async (req,res) =>{
 //Like a post 
 router.put("/like/:id",auth, async(req,res)=>{
     try {
-        const post= await Post.findById(req.params.id);
+       const post= await Post.findById(req.params.id);
 
         //check if the post is already liked by the user
         //console.log(post.likes.filter(like => like.user.toString()));
